@@ -1,5 +1,7 @@
 body{
 	background-color: #f5fbff;
+	height: 100%;
+	width: 100%;
 }
 
 .panel .heading{

@@ -12,12 +12,10 @@
     <body>
         <div class="container">
            <div class="well text-center">
-              <h1>Dynamic CRUD with OOP & PHP</h1>       
-           </div>
-
-           <div class="message message-success">
+              <h1>Dynamic CRUD with OOP & PHP</h1>
+		   <div class="wrapper show">
+			<div class="message message-success">
 	           	<div class="alert-symbol">
-					<!-- <span class="fa fa-exclamation-circle"></span> -->
 					<i class="fa fa-check-circle" aria-hidden="true"></i>
 
 	           	</div>
@@ -32,4 +30,7 @@
 
 	           	</div>
 			</div>
+		   </div>       
+           </div>
+           
              
