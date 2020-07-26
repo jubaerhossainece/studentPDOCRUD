@@ -1,0 +1,56 @@
+body{
+	background-color: #f5fbff;
+}
+
+.panel .heading{
+	padding: 0 2rem;
+}
+
+.btn{
+	border-radius: 2px;
+	transition: all 0.3s ease;
+}
+
+.btn-green{
+	background-color: #32cc73;
+	color: white;
+}
+
+.btn-green:hover{
+	background-color: #17a051;
+	color: white;
+}
+
+.btn-green:focus{
+	color: white;
+}
+
+.btn-danger{
+	background-color: #e63f3f;
+}
+
+.btn-danger:hover{
+	background-color: #ca1616;
+}
+
+.btn-danger:focus{
+	border-color: #e63f3f;
+}
+
+.btn-edit{
+	background-color: #3467eb;
+	color: white;
+	border: 1px solid #3467eb;
+}
+
+.btn-edit:hover{
+	background-color: #0738ab;
+	color: white;
+	border: 1px solid #0738ab;
+}
+
+.btn-edit:focus{
+	background-color: #0738ab;
+	color: white;
+	border: 1px solid #0738ab;
+}

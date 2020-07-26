@@ -1,7 +1,7 @@
 <?php 
 include('library/Session.php');
-include('includes/header.php'); 
 include('library/Database.php');
+include('includes/header.php'); 
 ?>
 <?php
 Session::init();
@@ -14,7 +14,7 @@ if(!empty($msg)){
 ?>
 <div class="panel panel-default">
 <div class="panel heading">
- <h2>Student data<a class="btn btn-success pull-right" href="addstudent.php">Add Student</a></h2>
+ <h2>Student data<a class="btn btn-green pull-right" href="addstudent.php">Add Student</a></h2>
 </div>  
 <div class="panel-body">
 <table class="table table-stripped">
@@ -50,8 +50,8 @@ if(!empty($msg)){
     <td><?php echo $data['name']; ?></td>
     <td><?php echo $data['email']; ?></td>
     <td><?php echo $data['phone']; ?></td>
-    <td><a class="btn btn-info" href="editstudent.php?id=<?php echo $data['id']; ?>">Edit</a>
-    <a class="btn btn-primary" href="library/process_student.php?action=delete&id=<?php echo $data['id']; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a></td>
+    <td><a class="btn btn-edit" href="editstudent.php?id=<?php echo $data['id']; ?>">Edit</a>
+    <a class="btn btn-danger" href="library/process_student.php?action=delete&id=<?php echo $data['id']; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a></td>
 </tr>
 <?php
             }

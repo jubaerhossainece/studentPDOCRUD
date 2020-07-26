@@ -38,7 +38,7 @@ include('includes/header.php');
         <div class="form-group">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <input type="hidden" name="action" value="edit">
-        <input class="btn btn-primary" type="submit" name="submit" value="Update Student">
+        <input class="btn btn-edit" type="submit" name="submit" value="Update Student">
         </div>
     </form>
 </div>

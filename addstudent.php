@@ -25,7 +25,7 @@
         
         <div class="form-group">
         <input type="hidden" name="action" value="add"/>
-        <input class="btn btn-primary" type="submit" name="signup" value="Save & Continue"/>
+        <input class="btn btn-edit" type="submit" name="signup" value="Save & Continue"/>
         </div>
     </form>
         <p>By Signing up, you agree to our Terms and conditions</p>
