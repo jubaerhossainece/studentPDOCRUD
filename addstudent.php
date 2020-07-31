@@ -1,3 +1,6 @@
+<?php 
+    ob_start();
+ ?>
 <?php include('includes/header.php'); ?>
   <div class="panel panel-default">
    <div class = "panel-heading">
@@ -33,3 +36,6 @@
 </div>
 </div>
 <?php include('includes/footer.php'); ?>
+<?php 
+    ob_end_flush();
+ ?>

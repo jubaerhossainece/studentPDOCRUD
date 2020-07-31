@@ -1,4 +1,7 @@
 <?php 
+    ob_start();
+ ?>
+<?php 
 include('library/Session.php');
 include('library/Database.php');
 include('includes/header.php'); 
@@ -88,3 +91,6 @@ if(!empty($msg)){
 }
 ?>
 <script src="alert/alertAction.js"></script>
+<?php 
+    ob_end_flush();
+ ?>

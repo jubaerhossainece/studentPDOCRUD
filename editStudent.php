@@ -1,4 +1,7 @@
 <?php 
+    ob_start();
+ ?>
+<?php 
 include('library/Database.php');
 include('includes/header.php');
 ?>
@@ -51,3 +54,6 @@ include('includes/header.php');
 
 </div>
 <?php include('includes/footer.php'); ?>
+<?php 
+    ob_end_flush();
+ ?>
