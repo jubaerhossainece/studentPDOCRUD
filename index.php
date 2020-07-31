@@ -63,13 +63,13 @@ Session::init();
 
 <?php include('includes/footer.php'); ?>
 <?php
-// Session::init();
-// $type = Session::get('type');
-// $title = Session::get('title');
-// $msg = Session::get('msg');
-$type = 'message-danger';
-$title = 'message title';
-$msg = 'message description is for successful message';
+Session::init();
+$type = Session::get('type');
+$title = Session::get('title');
+$msg = Session::get('msg');
+// $type = 'message-danger';
+// $title = 'message title';
+// $msg = 'message description is for successful message';
 if(!empty($msg)){
 
  ?> 
