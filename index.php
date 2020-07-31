@@ -2,16 +2,10 @@
 include('library/Session.php');
 include('library/Database.php');
 include('includes/header.php'); 
-?>
-<?php
 Session::init();
-$msg = Session::get('get');
-if(!empty($msg)){
-    echo '<h2 style="padding:8px 0px; border-radius:10px" class = "alert alert-info text text-center">'.$msg.'</h2>';
-    Session::unset();
-}
-
 ?>
+
+
 <div class="panel panel-default">
 <div class="panel heading">
  <h2>Student data<a class="btn btn-green pull-right" href="addstudent.php">Add Student</a></h2>
@@ -65,3 +59,32 @@ if(!empty($msg)){
 </div>
 
 <?php include('includes/footer.php'); ?>
+<?php
+Session::init();
+$type = Session::get('type');
+$title = Session::get('title');
+$msg = Session::get('msg');
+// $type = 'message-danger';
+// $title = 'message title';
+// $msg = 'message description is for successful message';
+if(!empty($msg)){
+
+ ?> 
+
+ <div>
+   
+ </div>
+<script>
+  alertJS({
+    type: "<?php echo $type ?>", 
+    title: "<?php echo $title ?>",
+    desc: "<?php echo $msg ?>"
+  });
+</script>
+<?php    
+     Session::set('type', NULL);
+     Session::set('title', NULL);
+     Session::set('msg', NULL);
+}
+?>
+<script src="alert/alertAction.js"></script>

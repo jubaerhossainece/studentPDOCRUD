@@ -1,0 +1,172 @@
+html{
+	font-size: 12px;
+}
+
+body {
+}
+
+#wrapper{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	position: fixed;
+    top: 10px;
+    right: 2rem;
+    width: 280px;
+    min-height: 60px;
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.message {
+	display: flex;
+	/*border-bottom: 5px solid rgba(0,0,0,0.2);*/
+}
+
+/*.message-success .alert-symbol{
+	background-color: rgba(1,184,36, 0.3);
+}*/
+
+.alert-symbol{
+	display: flex;
+    padding-left: 1rem;
+    align-items: center;
+    flex: 0 0 40px;
+    font-size: 30px;
+}
+
+.alert-symbol .fa{
+	padding: 6px;
+}
+
+.alert-symbol span{
+	padding: 3px;
+}
+
+.message .content {
+	display: block;
+	justify-content: left;
+	align-items: center;
+	flex: 1;
+	padding: 5px;
+}
+
+.message .content span{
+	display: block;
+}
+
+.message .content .top{ 
+	display: flex;
+	justify-content: space-between;   
+	padding: 5px 0;
+    font-weight: 600;
+}
+
+.message .content .top .title {
+	padding: 2px 0;
+	font-size: 18px;
+}
+
+.message .content .top .close-btn {
+	font-size: 20px;
+	cursor: pointer;
+	padding: 0;
+	margin-top: -3px;
+	border: none;
+	transition: all 0.3s ease;
+	margin-right: 3px;
+}
+
+.message-success .content .top .close-btn:hover{
+	color: #066528;
+}
+
+.message .content .bottom{
+    font-size: 13px;
+    padding: 0px 10px 10px 0;
+    text-align: left;
+}
+
+.message .content .body, .message .content .title{
+	line-height: 1.1;
+}
+
+/*For Update or any Success*/
+
+.message-success{
+	background-color: rgba(1,184,36, 0.8);
+	color: rgb(0, 105, 2);
+	transition: all 0.3s ease;
+}
+
+.message-success:hover{
+	background-color: rgba(1,184,36, 0.9);
+    box-shadow: 0px 0px 10px 0px rgba(1,184,36, 0.5);
+}
+
+
+/*For deletion or any error*/
+.message-danger {
+	background-color: rgb(210, 16, 16, 0.8);
+	color: rgb(104, 3, 3);
+	transition: all 0.3s ease;
+}
+
+.message-danger:hover{
+	background-color: rgb(210, 16, 16, 0.9);
+    box-shadow: 0px 0px 10px 0px rgba(210, 16, 16, 0.5);
+}
+
+
+/*For any types of warning message*/
+.message-warning {
+	background-color: rgba(255, 179, 0, 0.8);
+	color: rgb(104, 83, 3);
+	transition: all 0.3s ease;
+}
+
+.message-warning:hover{
+	background-color: rgba(255, 179, 0, 0.9);
+    box-shadow: 0px 0px 10px 0px rgba(255, 179, 0, 0.5);
+}
+
+
+/*animations for alert notification*/
+#wrapper.show-message{
+	animation: show_slide 0.5s linear forwards;
+	display: inline-block;
+}
+
+@keyframes show_slide {
+	0%{
+		transform: translateX(100%);
+	}
+/*	40%{
+		transform: translateX(-15%);
+	}
+	80%{
+		transform: translateX(0%);
+	}*/
+	100%{
+		transform: translateX(0%);
+	}		
+}
+
+.hide-message{
+	animation: hide_slide 1s linear;
+}
+
+@keyframes hide_slide {
+	0%{
+		transform: translateX(0%);
+	}
+	/*40%{
+		transform: translateX(0%);
+	}
+	80%{
+		transform: translateX(-15%);
+	}*/
+	100%{
+		transform: translateX(200%);
+		opacity: 0;
+	}
+}

@@ -1,7 +1,11 @@
    <div class="well">
-    <h3>Website: www.trainingwithliveproject.com
-                <span class="pull-right">Like Us:www.facebook.com/jubaer</span></h3>
+     &copy; All rights reserved to Md. jubaer hossain 
             </div>
         </div>
     </body>
+
+
+<script src="includes/jquery.min.js"></script>
+<script src="includes/bootstrap.min.js"></script>
+      <script src="alert/index.js"></script>
     

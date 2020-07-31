@@ -10,18 +10,18 @@ class Database{
     private $pdo;
     
     public function __construct(){
-if(!isset($this->pdo)){
-     $dsn = "mysql:host=".$this->hostdb."; dbname=".$this->namedb;
-    try {
-        $link = new PDO($dsn, $this->userdb,$this->passdb);
-        $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $link->exec("SET CHARACTER SET utf8");
-        $this->pdo = $link;
-    } catch (PDOException $ex){
-        die("Failed to connect with Database".$ex->getMessage());
-    }   
-  }
-}
+        if(!isset($this->pdo)){
+             $dsn = "mysql:host=".$this->hostdb."; dbname=".$this->namedb;
+            try {
+                $link = new PDO($dsn, $this->userdb,$this->passdb);
+                $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $link->exec("SET CHARACTER SET utf8");
+                $this->pdo = $link;
+            } catch (PDOException $ex){
+                die("Failed to connect with Database".$ex->getMessage());
+            }   
+          }
+        }
 
     
     //read data
