@@ -11,7 +11,15 @@ if(element){
 	}
 
 
-	setTimeout(hideMessage, 5000);	
+	const clearHideEvent = setTimeout(hideMessage, 5000);
+
+	element.addEventListener("mouseover", function(){
+		clearTimeout(clearHideEvent);
+	});
+
+	element.addEventListener("mouseleave", function(){
+		setTimeout(hideMessage, 5000);
+	});
 
 	function hideMessage(){
 		element.classList.remove("show-message");
