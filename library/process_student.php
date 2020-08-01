@@ -45,7 +45,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
                     $title = "Update successful";
                     $msg = "Your data has been successfully Updated!";
                 } else{
-                    $type = "message-danger";
+                    $type = "message-warning";
                     $title = "Update failed";
                     $msg = "Your data has not been updated!";
                 }
