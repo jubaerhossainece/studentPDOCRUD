@@ -47,7 +47,7 @@ Session::init();
     <td><?php echo $data['name']; ?></td>
     <td><?php echo $data['email']; ?></td>
     <td><?php echo $data['phone']; ?></td>
-    <td><a class="btn btn-edit" href="editstudent.php?id=<?php echo $data['id']; ?>">Edit</a>
+    <td><a class="btn btn-edit" href="editStudent.php?id=<?php echo $data['id']; ?>">Edit</a>
     <a class="btn btn-danger" href="library/process_student.php?action=delete&id=<?php echo $data['id']; ?>" onclick="return confirm('Are you sure to delete?')">Delete</a></td>
 </tr>
 <?php
@@ -63,13 +63,14 @@ Session::init();
 
 <?php include('includes/footer.php'); ?>
 <?php
-Session::init();
-$type = Session::get('type');
-$title = Session::get('title');
-$msg = Session::get('msg');
-// $type = 'message-danger';
-// $title = 'message title';
-// $msg = 'message description is for successful message';
+ // Session::init();
+ // $type = Session::get('type');
+ // $title = Session::get('title');
+ // $msg = Session::get('msg');
+$type = 'message-success';
+$title = 'message title';
+$msg = 'message description is for successful message';
+
 if(!empty($msg)){
 
  ?> 

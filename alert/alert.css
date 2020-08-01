@@ -15,6 +15,7 @@ body {
     border-radius: 3px;
     cursor: pointer;
     overflow: hidden;
+    opacity: 0;
 }
 
 .message {
@@ -139,6 +140,7 @@ body {
 @keyframes show_slide {
 	0%{
 		transform: translateX(100%);
+		opacity: 0;
 	}
 /*	40%{
 		transform: translateX(-15%);
@@ -148,6 +150,7 @@ body {
 	}*/
 	100%{
 		transform: translateX(0%);
+		opacity: 1;
 	}		
 }
 
@@ -158,6 +161,7 @@ body {
 @keyframes hide_slide {
 	0%{
 		transform: translateX(0%);
+		opacity: 1;
 	}
 	/*40%{
 		transform: translateX(0%);

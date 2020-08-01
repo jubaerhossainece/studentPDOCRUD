@@ -1,7 +1,9 @@
 <?php
+ob_start();
 include('Database.php');
 include('Session.php');
 Session::init();
+
 $db = new Database();
 $table = "tbl_student";
 if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){

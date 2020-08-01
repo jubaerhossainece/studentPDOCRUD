@@ -10,15 +10,18 @@ if(element){
 		element.classList.add("show-message");
 	}
 
+	var clearHideEvent = 0;
 
-	const clearHideEvent = setTimeout(hideMessage, 5000);
+	clearHideEvent = setTimeout(hideMessage, 3000);
 
 	element.addEventListener("mouseover", function(){
 		clearTimeout(clearHideEvent);
+		// console.log('hello mouseover');
 	});
 
-	element.addEventListener("mouseleave", function(){
-		setTimeout(hideMessage, 5000);
+	element.addEventListener("mouseout", function(){
+		clearHideEvent = setTimeout(hideMessage, 3000);
+		// console.log('hello leave');
 	});
 
 	function hideMessage(){
